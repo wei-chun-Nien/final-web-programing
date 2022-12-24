@@ -55,7 +55,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-initializeApp(firebaseConfig);
+//initializeApp(firebaseConfig);
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -213,3 +213,4 @@ const deleteContent = () => {
 };
 
 window.addEventListener("load", start);
+
