@@ -4,8 +4,7 @@ import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 // import { } from 'firebase/<service>';
 
 // TODO: Replace the following with your app's Firebase project configuration
-
-  const firebaseConfig = {
+const firebaseConfig = {
   apiKey: "AIzaSyBYBt9Gx0BQU25p4sz-Ex54EPXo1b9_K2w",
   authDomain: "fir-web-programing.firebaseapp.com",
   databaseURL: "https://fir-web-programing-default-rtdb.asia-southeast1.firebasedatabase.app",
@@ -15,7 +14,6 @@ import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
   appId: "1:828209721818:web:4a228e3f1514ea6d3390e3",
   measurementId: "G-K0TECEYRKK"
 };
-
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
