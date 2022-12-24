@@ -36,6 +36,7 @@ import {
   updateDoc,
   deleteDoc,
 } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -53,6 +54,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
+
 initializeApp(firebaseConfig);
 
 const auth = getAuth();
