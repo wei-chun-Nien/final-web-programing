@@ -18,7 +18,10 @@
 //   deleteDoc,
 // } from "firebase/firestore";
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+//import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import {
   getAuth,
   deleteUser,
@@ -41,17 +44,22 @@ import {
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyC8BpOEq9WIjKAliG-V5mqlX9u6RpKXUO8",
-  authDomain: "shared-diary-2d8c0.firebaseapp.com",
-  projectId: "shared-diary-2d8c0",
-  storageBucket: "shared-diary-2d8c0.appspot.com",
-  messagingSenderId: "303627512340",
-  appId: "1:303627512340:web:4a49068b02a2cf973ed501",
-  measurementId: "G-SXPMMQ5SD0",
+  apiKey: "AIzaSyBYBt9Gx0BQU25p4sz-Ex54EPXo1b9_K2w",
+  authDomain: "fir-web-programing.firebaseapp.com",
+  databaseURL: "https://fir-web-programing-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "fir-web-programing",
+  storageBucket: "fir-web-programing.appspot.com",
+  messagingSenderId: "828209721818",
+  appId: "1:828209721818:web:4a228e3f1514ea6d3390e3",
+  measurementId: "G-K0TECEYRKK"
 };
 
 // Initialize Firebase
 initializeApp(firebaseConfig);
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 const auth = getAuth();
 const providerGoogle = new GoogleAuthProvider();
@@ -82,6 +90,7 @@ const login = () => {
       document.querySelector(".login").style.display = "none";
       document.querySelector(".container").style.display = "block";
     })
+
     .catch((error) => {
       alert("Something was wrong.");
       console.log();
