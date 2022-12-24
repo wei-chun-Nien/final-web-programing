@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>rich knowledge of king</title>
+    <link href="show1.css" rel="stylesheet">
+    <script>
+
+      function listBtn() {
+        var click1= document.getElementById('click1');
+        var container1 = document.getElementById('container1');
+        if (container1.style.display === 'none') {
+          container1.style.display = 'block';
+          click1.style.display='none'
+        } else {
+          container1.style.display = 'none';
+          click1.style.display='block'
+        }
+      }
+          </script>
+</head>
+<body>
+ 
+  <H1><marquee behavior="scroll"  bgcolor="#B2B200" width="500" height="50" >歡迎光臨富士大學堂~</marquee></H1>
+  <a href="https://www.youtube.com/watch?v=yK9nqKY-8o4&list=PLvwmO12a3QmlPywyTe9AHOhJ4zqIg9KBo" target="_blank"><input class="video" type="button" value="介紹影片" ></a> 
+  <input id="start" class="login1" type="button" value="登入" id="click1"onclick="listBtn()" ></input>
+  <input id="start" class="start" type="button" value="開始遊戲"  onclick="location.href='register.html'" ></input>
+  <img src="2.jpg" class="panda">
+  <img src="3.jpg" class="panda1">
+  <div class="color"></div>
+  <div class="color"></div>
+  <div class="color"></div>
+  <div class="box">
+      <div class="circle" style="--x:0"></div>
+      <div class="circle" style="--x:1"></div>
+      <div class="circle" style="--x:2"></div>
+      <div class="circle" style="--x:3"></div>
+      <div class="circle" style="--x:4"></div>
+ </div>
+ 
+     <div class="login_page">
+       <div id="container1" style="display: none;">
+ 
+         <div class="login">  
+           
+           <h3>登入 Login</h3>
+ 
+           <form>
+             <input type="text" id="username" name="username" placeholder="帳號" required>
+             <div class="tab"></div>
+             <input type="text" id="password" name="password" placeholder="密碼" required>
+             <div class="tab"></div>
+             <input type="submit" value="登入" class="submit" id="submit" >
+           </form>  
+           <h5>還沒註冊嗎?請點下面註冊帳號喔!</h5>
+           <h5 onclick="show_hide()">註冊帳號</h5>
+           
+         </div><!-- login end-->
+       </div><!-- container1 end-->
+     </div><!-- login_page end-->
+     
+     <div class="signup_page">
+       <div id="container2">
+ 
+         <div class="signup">  
+           
+           <h3>註冊 Sign Up</h3>
+ 
+           <form action="用戶管理.php">
+             <input type="text" id="fullname" name="fullname" placeholder="使用者全名" required>
+             <div class="tab"></div>
+             <input type="text" id="username2" name="username" placeholder="帳號" required>
+             <div class="tab"></div>
+             <input type="text" id="password2" name="password" placeholder="密碼" required>
+             <div class="tab"></div>
+             <input type="text" id="comfirm_password" name="comfirm_password" placeholder="確認密碼" required>
+             <div class="tab"></div>            
+             <input type="submit" value="註冊" class="submit">
+           </form>  
+ 
+           <h5 onclick="show_hide()">登入帳號</h5>
+           
+         </div><!-- signup end-->
+       </div><!-- container2 end-->
+     </div><!-- signup_page end--> 
+    
+    <script src="show.js"></script>
+  </body>
+</html>
