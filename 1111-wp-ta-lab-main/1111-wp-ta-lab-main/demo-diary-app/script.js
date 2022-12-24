@@ -18,10 +18,11 @@
 //   deleteDoc,
 // } from "firebase/firestore";
 
-import { initializeApp } from "firebase/app";
+//import { initializeApp } from "firebase/app";
+
 import { getAnalytics } from "firebase/analytics";
 
-//import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import {
   getAuth,
   deleteUser,
@@ -213,4 +214,3 @@ const deleteContent = () => {
 };
 
 window.addEventListener("load", start);
-
