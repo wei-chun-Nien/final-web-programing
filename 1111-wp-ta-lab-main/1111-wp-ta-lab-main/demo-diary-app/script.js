@@ -18,11 +18,8 @@
 //   deleteDoc,
 // } from "firebase/firestore";
 
-import { initializeApp } from "firebase/app";
-
-import { getAnalytics } from "firebase/analytics";
-
-//import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+//import { getAnalytics } from "firebase/analytics";
 import {
   getAuth,
   deleteUser,
@@ -56,11 +53,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-//initializeApp(firebaseConfig);
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+initializeApp(firebaseConfig);
 
 const auth = getAuth();
 const providerGoogle = new GoogleAuthProvider();
@@ -91,7 +84,6 @@ const login = () => {
       document.querySelector(".login").style.display = "none";
       document.querySelector(".container").style.display = "block";
     })
-
     .catch((error) => {
       alert("Something was wrong.");
       console.log();
